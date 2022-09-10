@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/categoriesFragments">
+
+    <fragment
+        android:id="@+id/categoriesFragments"
+        android:name="com.example.foody.fragments.categories.CategoriesFragments"
+        android:label="fragment_categories_fragments"
+        tools:layout="@layout/fragment_categories_fragments" >
+        <action
+            android:id="@+id/action_categoriesFragments_to_specificCategoryFragment"
+            app:destination="@id/specificCategoryFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/specificCategoryFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/specificCategoryFragment"
+        android:name="com.example.foody.fragments.specificCategory.SpecificCategoryFragment"
+        android:label="fragment_specific_category"
+        tools:layout="@layout/fragment_specific_category" >
+        <argument
+            android:name="selectedCategory"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_specificCategoryFragment_to_mealFragment"
+            app:destination="@id/mealFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealFragment"
+        android:name="com.example.foody.fragments.mealinfo.MealFragment"
+        android:label="MealFragment" >
+        <argument
+            android:name="mealID"
+            app:argType="integer" />
+        <argument
+            android:name="meal_title"
+            app:argType="string" />
+    </fragment>
+</navigation>
