@@ -8,6 +8,7 @@
     >
 
     <androidx.cardview.widget.CardView
+        android:backgroundTint="#FF6F00"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
@@ -16,20 +17,24 @@
 
         <ImageView
             android:id="@+id/food_image"
-            android:layout_width="192dp"
-            android:layout_height="150dp" />
+            android:layout_width="143dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5.5dp"
+            />
 
         <TextView
             android:id="@+id/item_title"
-            android:layout_width="190dp"
-            android:layout_height="88dp"
-            android:layout_marginHorizontal="200dp"
-            android:layout_marginVertical="10dp"
+            android:layout_width="204dp"
+            android:layout_height="94dp"
+            android:layout_marginHorizontal="160dp"
+            android:layout_marginVertical="30dp"
             android:background="#FF6F00"
-            android:text="hello"
-            android:textAlignment="center"
+            android:gravity="fill_vertical"
+            android:maxLines="4"
+            android:text="dcd"
             android:textColor="@color/white"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textSize="19dp"
+            android:textStyle="italic" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

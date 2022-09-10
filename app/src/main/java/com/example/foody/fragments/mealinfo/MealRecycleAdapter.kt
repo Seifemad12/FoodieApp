@@ -28,8 +28,8 @@ class MealRecycleAdapter(val context: Context) : RecyclerView.Adapter<MealRecycl
     }
 
     override fun onBindViewHolder(holder: MealHolder, position: Int) {
-        holder.itemView.findViewById<TextView>(R.id.us).text = "US"
-        holder.itemView.findViewById<TextView>(R.id.metric).text = "Metric"
+        /*holder.itemView.findViewById<TextView>(R.id.us).text = "US"
+        holder.itemView.findViewById<TextView>(R.id.metric).text = "Metric"*/
 
         val item = ingredient_list[position]
         holder.item_title.text = item.name
