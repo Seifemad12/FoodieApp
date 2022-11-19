@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:layout_margin="10dp"
-    android:id="@+id/specificMeal"
-    >
-
-    <androidx.cardview.widget.CardView
-        android:backgroundTint="#FF6F00"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:id="@+id/specificMeal">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-
+        <!-- Media -->
         <ImageView
             android:id="@+id/food_image"
-            android:layout_width="143dp"
-            android:layout_height="150dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="5.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:src="@mipmap/ic_foodie"
+            android:scaleType="centerCrop"
             />
 
-        <TextView
-            android:id="@+id/item_title"
-            android:layout_width="204dp"
-            android:layout_height="94dp"
-            android:layout_marginHorizontal="160dp"
-            android:layout_marginVertical="30dp"
-            android:background="#FF6F00"
-            android:gravity="fill_vertical"
-            android:maxLines="4"
-            android:text="dcd"
-            android:textColor="@color/white"
-            android:textSize="19dp"
-            android:textStyle="italic" />
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title, secondary and supporting text -->
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

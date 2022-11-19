@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.findNavController
 import com.bumptech.glide.Glide
@@ -33,8 +35,8 @@ class SpecificCatRecycleAdapter(val context: Context) : RecyclerView.Adapter<Spe
     override fun onBindViewHolder(holder: SpecificHolder, position: Int) {
         val item = specificCategoryListRecipe[position]
         holder.item_title.text = item.title
-        Glide.with(context).load(item.image).into(holder.food_image)
-        holder.itemView.findViewById<ConstraintLayout>(R.id.specificMeal).setOnClickListener {
+        Glide.with(context).load(item.image).error(R.mipmap.ic_foodie).into(holder.food_image)
+        holder.itemView.findViewById<CardView>(R.id.specificMeal).setOnClickListener {
             val action = SpecificCategoryFragmentDirections.actionSpecificCategoryFragmentToMealFragment(item.id,item.title!!)
             it.findNavController().navigate(action)
         }
